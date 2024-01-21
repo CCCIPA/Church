@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.26.1",
@@ -14,6 +15,9 @@
     "@hookform/resolvers": "^3.3.2",
     "@pinecone-database/pinecone": "^1.1.2",
     "@prisma/client": "^5.5.2",
+    "@prismicio/client": "^7.3.1",
+    "@prismicio/next": "^1.5.0",
+    "@prismicio/react": "^2.7.3",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
@@ -22,7 +26,7 @@
     "clsx": "^2.0.0",
     "eslint-config-prettier": "^9.0.0",
     "lucide-react": "^0.290.0",
-    "next": "14.0.0",
+    "next": "^14.1.0",
     "next-themes": "^0.2.1",
     "openai": "^4.14.1",
     "prettier": "^3.0.3",
@@ -36,6 +40,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.33",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -43,6 +48,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.0",
     "postcss": "^8",
+    "slice-machine-ui": "^1.23.0",
     "tailwindcss": "^3",
     "typescript": "^5"
   }
