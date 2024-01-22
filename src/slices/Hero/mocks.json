@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"site_name": {
+				"__TYPE__": "FieldContent",
+				"value": "signal",
+				"type": "Text"
+			},
+			"tag_line": {
+				"__TYPE__": "FieldContent",
+				"value": "salmon",
+				"type": "Text"
+			},
+			"beta_name": {
+				"__TYPE__": "FieldContent",
+				"value": "tank",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -1,10 +1,10 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import { ThemeProvider } from "./ThemeProvider";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "FlowBrain",
@@ -18,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
+      <html lang="en" className="bg-slate-900 text-slate-100">
+        <body className={urbanist.className}>
           <ThemeProvider attribute="class">{children}</ThemeProvider>
         </body>
       </html>
