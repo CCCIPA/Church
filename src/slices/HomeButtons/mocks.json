@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"home_button1": {
+				"__TYPE__": "FieldContent",
+				"value": "do",
+				"type": "Text"
+			},
+			"home_button2": {
+				"__TYPE__": "FieldContent",
+				"value": "spend",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

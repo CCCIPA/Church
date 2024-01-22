@@ -1,5 +1,7 @@
 "use client";
 
+
+
 import { useEffect, useRef } from "react";
 import { Content, KeyTextField } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
@@ -83,7 +85,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     >
       <div className="grid min-h-[70dvh] grid-cols-1 lg:grid-cols-2 bg-slate-900">
         <Shapes />
-        <div className="col-start-1 lg:row-start-1 m-auto">
+        <div className="col-start-1 lg:row-start-1 m-auto select-none">
           <h1
             className=" mb-8 flex text-[120px] lg:text-[clamp(3rem,16vmin,16rem)] font-extrabold leading-none tracking-tighter"
             aria-label={slice.primary.site_name + "" + slice.primary.beta_name}
@@ -103,8 +105,12 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             {slice.primary.tag_line}
           </span>
         </div>
+       
       </div>
+      
     </Bounded>
+    
+    
   );
 };
 

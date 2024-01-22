@@ -1,0 +1,33 @@
+{
+  "id": "button",
+  "type": "SharedSlice",
+  "name": "HomeButtons",
+  "description": "Button",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "home_button1": {
+          "type": "Text",
+          "config": {
+            "label": "home_button1",
+            "placeholder": ""
+          }
+        },
+        "home_button2": {
+          "type": "Text",
+          "config": {
+            "label": "home_button2",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

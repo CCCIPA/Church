@@ -72,6 +72,58 @@ export type HomepageDocument<Lang extends string = string> =
 export type AllDocumentTypes = HomepageDocument;
 
 /**
+ * Primary content in *HomeButtons → Primary*
+ */
+export interface ButtonSliceDefaultPrimary {
+  /**
+   * home_button1 field in *HomeButtons → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: button.primary.home_button1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  home_button1: prismic.KeyTextField;
+
+  /**
+   * home_button2 field in *HomeButtons → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: button.primary.home_button2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  home_button2: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for HomeButtons Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ButtonSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ButtonSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *HomeButtons*
+ */
+type ButtonSliceVariation = ButtonSliceDefault;
+
+/**
+ * HomeButtons Shared Slice
+ *
+ * - **API ID**: `button`
+ * - **Description**: Button
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ButtonSlice = prismic.SharedSlice<"button", ButtonSliceVariation>;
+
+/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -147,6 +199,10 @@ declare module "@prismicio/client" {
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      ButtonSlice,
+      ButtonSliceDefaultPrimary,
+      ButtonSliceVariation,
+      ButtonSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
