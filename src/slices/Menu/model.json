@@ -1,8 +1,8 @@
 {
-  "id": "button",
+  "id": "menu",
   "type": "SharedSlice",
-  "name": "HomeButtons",
-  "description": "Button",
+  "name": "Menu",
+  "description": "Menu",
   "variations": [
     {
       "id": "default",
@@ -12,17 +12,17 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "home_button1": {
+        "menu_button1": {
           "type": "Text",
           "config": {
-            "label": "home_button1",
+            "label": "menu_button1",
             "placeholder": ""
           }
         },
-        "home_button2": {
+        "menu_button2": {
           "type": "Text",
           "config": {
-            "label": "home_button2",
+            "label": "menu_button2",
             "placeholder": ""
           }
         }
