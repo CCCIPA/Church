@@ -1,23 +1,12 @@
 "use client";
 
-
-
 import { useEffect, useRef } from "react";
-import { Content, KeyTextField } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
 import { gsap } from "gsap";
-import Bounded from "@/components/Bounded";
+import Bounded from "@/components/notes/Bounded";
 import Shapes from "./Shapes";
 
-/**
- * Props for `Hero`.
- */
-export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
-/**
- * Component for "Hero" Slices.
- */
-const Hero = ({ slice }: HeroProps): JSX.Element => {
+export default function Hero () {
   const component = useRef(null);
 
   useEffect(() => {
@@ -65,7 +54,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     return () => ctx.revert();
   }, []);
 
-  const renderLetters = (name: KeyTextField, key: string) => {
+  const renderLetters = (name: string, key: string) => {
     if (!name) return;
     return name.split("").map((letter, index) => (
       <span
@@ -79,39 +68,34 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
   return (
     <Bounded
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
+     
       ref={component}
     >
-      <div className="grid min-h-[70dvh] grid-cols-1 lg:grid-cols-2 bg-slate-900">
+      <div className="grid min-h-[70dvh] grid-cols-1 bg-slate-900 lg:grid-cols-2">
         <Shapes />
-        <div className="col-start-1 lg:row-start-1 m-auto select-none">
+        <div className="col-start-1 m-auto select-none lg:row-start-1">
           <h1
-            className=" mb-8 flex text-[120px] lg:text-[clamp(3rem,16vmin,16rem)] font-extrabold leading-none tracking-tighter"
-            aria-label={slice.primary.site_name + "" + slice.primary.beta_name}
+            className=" mb-8 flex text-[120px] font-extrabold leading-none tracking-tighter lg:text-[clamp(3rem,16vmin,16rem)]"
+            aria-label={"Cur" + "" + "Bot"}
           >
             <span className="block text-slate-300 ">
-              {renderLetters(slice.primary.site_name, "first")}
+              {renderLetters("Cur", "first")}
             </span>
             <span className=" block text-slate-500 ">
-              {renderLetters(slice.primary.beta_name, "last")}
+              {renderLetters("Bot", "last")}
             </span>
           </h1>
           <span
             className="tag-line -mt-8 ml-2 block bg-gradient-to-tr from-yellow-500 via-yellow-200
-             to-yellow-200 bg-clip-text text-[24px] lg:text-[clamp(1.5rem,3.2vmin,3.2rem)] font-bold uppercase tracking-[.2em] text-transparent
-             opacity-0"
+             to-yellow-200 bg-clip-text text-[24px] font-bold uppercase tracking-[.2em] text-transparent opacity-0
+             lg:text-[clamp(1.5rem,3.2vmin,3.2rem)]"
           >
-            {slice.primary.tag_line}
+            {"The Curriculum Bot"}
           </span>
         </div>
-       
       </div>
-      
     </Bounded>
-    
-    
   );
 };
 
-export default Hero;
+

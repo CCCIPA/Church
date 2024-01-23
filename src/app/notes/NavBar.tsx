@@ -1,9 +1,9 @@
 "use client";
 
 import logo from "@/assets/logo.png";
-import AIChatButton from "@/components/AIChatButton";
-import AddEditNoteDialog from "@/components/AddEditNoteDialog";
-import ThemeToggleButton from "@/components/ThemeToggleButton";
+import AIChatButton from "@/components/notes/AIChatButton";
+import AddEditNoteDialog from "@/components/notes/AddEditNoteDialog";
+import ThemeToggleButton from "@/components/notes/ThemeToggleButton";
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";

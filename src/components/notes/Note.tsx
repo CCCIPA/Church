@@ -9,7 +9,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "../ui/card";
 
 interface NoteProps {
   note: NoteModel;

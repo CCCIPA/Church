@@ -10,7 +10,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "./ui/dialog";
+} from "../ui/dialog";
 import {
   Form,
   FormControl,
@@ -18,10 +18,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form";
-import { Input } from "./ui/input";
-import LoadingButton from "./ui/loading-button";
-import { Textarea } from "./ui/textarea";
+} from "../ui/form";
+import { Input } from "../ui/input";
+import LoadingButton from "../ui/loading-button";
+import { Textarea } from "../ui/textarea";
 
 interface AddEditNoteDialogProps {
   open: boolean;
