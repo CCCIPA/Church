@@ -5,17 +5,19 @@ import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Float, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { cn } from "@/lib/utils";
 
-export default function Shapes() {
+export default function Shapes(className) {
   return (
-    <div className="row-span-1 row-start-1 lg:mt-0">
+    <div className={cn("row-span-1 row-start-1 lg:mt-0", className)}>
       <Canvas
-        className="z-0"
+        className="z-0 w-[100dvw]"
         shadows
         gl={{ antialias: false }}
-        dpr={[1, 1.5]}
-        camera={{ position: [0, 0, 25], fov: 30, near: 1, far: 40 }}
+        dpr={[1, 1]}
+        camera={{ position: [0, 0, 30], fov: 40, near: 10, far: 100 }}
         alpha={true}
+        style={"z-0 w-[100dvw]"}
       >
         <Suspense fallback={null}>
           <Geometries />
@@ -122,7 +124,7 @@ function Geometry({ r, position, geometry, materials, soundEffects }) {
       ease: "elastic.out(1,0.3)",
       yoyo: true,
     });
-    
+
     mesh.material = getRandomMaterial();
   }
   const handlePointerOver = () => {

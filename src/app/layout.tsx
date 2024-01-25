@@ -3,6 +3,11 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import { ThemeProvider } from "./ThemeProvider";
 import "./globals.css";
+import "@mantine/core/styles.css";
+import React from "react";
+import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { theme } from "../theme";
+// import "./globals.css";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -18,9 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" className="bg-slate-900 text-slate-100">
+      <html lang="en">
+        <head>
+          <ColorSchemeScript />
+        </head>
         <body className={urbanist.className}>
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
+          <MantineProvider theme={theme}>
+            <ThemeProvider attribute="class">{children}</ThemeProvider>
+          </MantineProvider>
         </body>
       </html>
     </ClerkProvider>

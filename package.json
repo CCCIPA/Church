@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
     "@clerk/nextjs": "^4.26.1",
     "@clerk/themes": "^1.7.9",
     "@hookform/resolvers": "^3.3.2",
@@ -19,6 +20,8 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@react-three/drei": "^9.96.1",
     "@react-three/fiber": "^8.15.14",
+    "@react-three/postprocessing": "^2.15.12",
+    "@react-three/rapier": "^1.2.1",
     "@types/three": "^0.160.0",
     "ai": "^2.2.20",
     "class-variance-authority": "^0.7.0",
@@ -38,7 +41,9 @@
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.160.0",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "@mantine/core": "^7.4.2",
+    "@mantine/hooks": "^7.4.2"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.33",
