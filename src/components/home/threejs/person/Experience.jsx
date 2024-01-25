@@ -9,7 +9,7 @@ function Experience() {
       {/* <OrbitControls /> */}
       <ambientLight />
       <directionalLight
-        position={[-5, 5, 5]}
+        position={[-1, 5, 5]}
         castShadow
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}

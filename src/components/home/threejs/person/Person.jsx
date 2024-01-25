@@ -4,11 +4,12 @@ import Interface from "./Interface";
 
 export default function Person() {
   return (
-    <div className="h-[100dvh]">
+    <div className="bg-slate-500">
       <Canvas camera={{position: [1,1.5, 2.5], fov:50}} shadows>
-        <Experience />
+        <Experience />        
       </Canvas>
       <Interface/>
+
     </div>
   );
 }

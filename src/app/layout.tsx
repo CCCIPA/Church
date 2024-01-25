@@ -7,7 +7,7 @@ import "@mantine/core/styles.css";
 import React from "react";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "../theme";
-// import "./globals.css";
+import "./globals.css";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" className="h-[100dvh] flex items-center justify-center bg-fuchsia-500">
         <head>
           <ColorSchemeScript />
         </head>

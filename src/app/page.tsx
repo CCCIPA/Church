@@ -27,8 +27,13 @@ export default function Home() {
   // if (userId) redirect("/notes");
 
   return (
+    <>
+    {/* <HomeButtons/> */}
     <CharacterAnimationsProvider>
+      <div className="bg-slate-400 h-[50dvh] w-[40dvh] flex justify-center">
       <Person />
+      </div>
     </CharacterAnimationsProvider>
+    </>
   );
 }
