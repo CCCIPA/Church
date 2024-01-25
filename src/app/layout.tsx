@@ -2,7 +2,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import { ThemeProvider } from "./ThemeProvider";
-import "./globals.css";
 import "@mantine/core/styles.css";
 import React from "react";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
@@ -12,8 +11,8 @@ import "./globals.css";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FlowBrain",
-  description: "The intelligent note-taking app",
+  title: "CurBot",
+  description: "Note-Taking App",
 };
 
 export default function RootLayout({
@@ -23,14 +22,16 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" className="h-[100dvh] flex items-center justify-center bg-fuchsia-500">
+      <html lang="en" className="h-[100dvh] flex items-center justify-center">
         <head>
           <ColorSchemeScript />
         </head>
         <body className={urbanist.className}>
+      <ThemeProvider attribute="class">
           <MantineProvider theme={theme}>
-            <ThemeProvider attribute="class">{children}</ThemeProvider>
+            {children}
           </MantineProvider>
+    </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

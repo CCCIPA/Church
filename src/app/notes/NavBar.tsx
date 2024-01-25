@@ -22,9 +22,9 @@ export default function NavBar() {
     <>
       <div className="p-4 shadow">
         <div className="m-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
-          <Link href="/" className="flex items-center gap-1">
-            <Image src={logo} alt="FlowBrain logo" width={40} height={40} />
-            <span className="font-bold">FlowBrain</span>
+          <Link href="/notes" className="flex items-center gap-1">
+            <Image src={logo} alt="CurBot logo" width={40} height={40} />
+            <span className="font-bold ml-1">Notes</span>
           </Link>
           <div className="flex items-center gap-2">
             <UserButton
