@@ -2,6 +2,7 @@
 
 import { OrbitControls } from "@react-three/drei";
 import { Woman } from "./Woman";
+import Interface from "./Interface";
 
 function Experience() {
   return (

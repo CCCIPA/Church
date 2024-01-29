@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Bounded from "@/components/notes/Bounded";
-import Shapes from "./threejs/Shapes";
+import Person from "./threejs/person/Person";
+import HomeButtons from "./HomeButtons";
 
 export default function Hero() {
   const component = useRef(null);
@@ -82,12 +83,18 @@ export default function Hero() {
   };
 
   return (
-    <Bounded className="" ref={component}>
-      <div className="-mt-35 grid h-[80dvmax] md:w-[80dvw] grid-cols-1 p-10 md:-mt-44 md:grid-cols-2">
-        <Shapes className="h-[60dvmax] -mt-35 w-[100dvw]" />
-        <div className="col-start-1 m-auto select-none md:row-start-1 h-[20dvmax]">
+    <Bounded
+      className="m-auto -mt-10 flex h-[60dvh] items-center justify-center sm:-mt-4"
+      ref={component}
+    >
+      <div className="m-auto grid grid-cols-1 md:w-[80dvw] md:grid-cols-2 xl:w-[70vw] 2xl:w-[60vw] ">
+        <div className="flex items-center justify-center  border-dashed">
+          <Person />
+        </div>
+        <div className="m-auto -mt-[30vmin] select-none sm:-mt-20 md:row-start-1 md:mt-auto ">
           <h1
-            className=" m-auto -mt-9 mb-8 flex text-[100px] font-extrabold leading-none tracking-tighter md:mt-auto md:text-[100px] lg:text-[150px]"
+            className=" m-auto mb-8 flex  text-[20vmin] font-extrabold
+             leading-none tracking-tighter sm:text-[18vmin] md:text-[13vmin] "
             aria-label={"Cur" + "" + "Bot"}
           >
             <span className="block text-slate-300 ">
@@ -99,14 +106,14 @@ export default function Hero() {
           </h1>
           <span
             className="tag-line -mt-8 ml-1 block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-200
-             bg-clip-text text-center text-[20px] font-bold uppercase tracking-[.2em] text-transparent opacity-0
-             lg:text-[clamp(1.5rem,3vmin,3rem)]"
+             bg-clip-text text-center  text-[4vmin] font-bold uppercase tracking-[.2em] text-transparent opacity-0 sm:text-[3.65vmin] md:text-[2.65vmin] 
+             "
           >
             {"The Curriculum Bot"}
           </span>
           <span
-            className="beta ml-3 block bg-clip-text text-center text-[40px] font-bold uppercase text-emerald-500 opacity-0
-             lg:text-[clamp(1.5rem,3.2vmin,3.2rem)]"
+            className="beta ml-3 block bg-clip-text text-center text-[6vmin] font-bold uppercase text-emerald-500 opacity-0 md:text-[4.65vmin]
+             "
           >
             {"BETA"}
           </span>

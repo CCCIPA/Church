@@ -22,16 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" className="h-[100dvh] flex items-center justify-center">
+      <html lang="en">
         <head>
           <ColorSchemeScript />
         </head>
         <body className={urbanist.className}>
-      <ThemeProvider attribute="class">
           <MantineProvider theme={theme}>
-            {children}
+            <ThemeProvider attribute="class">{children}</ThemeProvider>
           </MantineProvider>
-    </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

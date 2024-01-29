@@ -10,15 +10,19 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
     "@clerk/nextjs": "^4.26.1",
     "@clerk/themes": "^1.7.9",
+    "@emotion/react": "^11.10.5",
     "@hookform/resolvers": "^3.3.2",
+    "@huggingface/inference": "^2.6.4",
+    "@mantine/core": "^7.4.2",
+    "@mantine/hooks": "^7.4.2",
     "@pinecone-database/pinecone": "^1.1.2",
     "@prisma/client": "^5.5.2",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "@react-three/drei": "^9.96.1",
     "@react-three/fiber": "^8.15.14",
     "@react-three/postprocessing": "^2.15.12",
@@ -29,6 +33,7 @@
     "clsx": "^2.1.0",
     "eslint-config-prettier": "^9.0.0",
     "gsap": "^3.12.5",
+    "huggingface": "^1.4.0",
     "lucide-react": "^0.290.0",
     "next": "^14.1.0",
     "next-themes": "^0.2.1",
@@ -42,9 +47,7 @@
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.160.0",
-    "zod": "^3.22.4",
-    "@mantine/core": "^7.4.2",
-    "@mantine/hooks": "^7.4.2"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.33",

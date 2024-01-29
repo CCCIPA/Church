@@ -5,10 +5,15 @@ import LoadingButton from "../ui/loading-button";
 import Link from "next/link";
 import Bounded from "@/components/notes/Bounded";
 import gsap from "gsap";
+import ThemeToggleButton from "../ThemeToggleButton";
+import { Affix, Button, Stack } from "@mantine/core";
+import { useCharacterAnimations } from "../../app/contexts/CharacterAnimations";
 
 const HomeButtons = () => {
   const [loadingNotes, setLoadingNotes] = useState(false);
   const [loadingCourses, setLoadingCourses] = useState(false);
+  // const { animations, animationIndex, setAnimationIndex } =
+  //   useCharacterAnimations();
 
   const handleClickNotes = () => {
     setLoadingNotes(true);
@@ -27,22 +32,34 @@ const HomeButtons = () => {
       tl.fromTo(
         ".name-animation",
         {
-          x: -100,
+          x: 0,
           opacity: 0,
-          rotate: -10,
+          rotate: 0,
         },
         {
           x: 0,
           opacity: 1,
-          rotate: 0,
-          ease: "elastic.out(1, 0.3)",
-          duration: 1,
-          delay: 0.5,
+          rotate: 0,         
+          duration: 0.1,
+         delay:3,
           transformOrigin: "left top",
-          stagger: {
-            each: 0.1,
-            from: "random",
-          },
+         
+        },
+      );
+
+      tl.fromTo(
+        ".dev",
+        {
+          x: 100,
+          opacity: 0,
+          scale: 1.2,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "elastic.out(1, 0.3)",
         },
       );
 
@@ -78,10 +95,16 @@ const HomeButtons = () => {
   };
 
   return (
-    <>
+    <main>
+      {/* <span
+        ref={component}
+        className="z-50 ml-[4.2rem] flex  h-[5dvh] w-[100dvw] items-end justify-center bg-slate-900 text-[1.5vmax] uppercase text-red-500 md:ml-24 md:text-[1.5vmin]"
+      >
+        {"In Development"}
+      </span> */}
       <Bounded
         ref={component}
-        className="mt-2 flex h-[10dvh] flex-row items-center gap-10 "
+        className="relative z-50 flex h-[15dvh] w-[100dvw] flex-row items-center justify-center bg-slate-900 text-white"
       >
         <LoadingButton
           variant="ghost"
@@ -89,8 +112,28 @@ const HomeButtons = () => {
           onClick={handleClickNotes}
           type="button"
         >
-          <Link href="/notes" passHref className="w-40 p-5 text-3xl">
+          <Link
+            href="/notes"
+            passHref
+            className="w-20 p-5 text-[4.5vmin] md:w-40 md:text-[3.65vmin]"
+          >
             {renderLetters("Notes", "second")}
+          </Link>
+        </LoadingButton>
+
+        <LoadingButton
+          variant="ghost"
+          loading={loadingCourses}
+          onClick={handleClickCourses}
+          type="button"
+          disabled={true}
+        >
+          <Link
+            href=""
+            passHref
+            className="w-20 p-5 text-[4.5vmin] md:w-40 md:text-[3.65vmin] "
+          >
+            {renderLetters("Chat", "last")}
           </Link>
         </LoadingButton>
         <LoadingButton
@@ -98,13 +141,18 @@ const HomeButtons = () => {
           loading={loadingCourses}
           onClick={handleClickCourses}
           type="button"
+          disabled={true}
         >
-          <Link href="/courses" passHref className="w-40 p-5 text-3xl">
-            {renderLetters("Courses", "last")}
+          <Link
+            href=""
+            passHref
+            className="w-20 p-5 text-[4.5vmin] md:w-40 md:text-[3.65vmin]"
+          >
+            {renderLetters("Play", "last")}
           </Link>
         </LoadingButton>
       </Bounded>
-    </>
+    </main>
   );
 };
 

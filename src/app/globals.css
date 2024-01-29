@@ -74,3 +74,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@media (width > 700px){
+
+  .custom-border {
+    border-left: 1px dashed #3490dc; /* Adjust thickness and color as needed */
+    height: 50%; /* Adjust the width as needed */  
+   
+  }
+}

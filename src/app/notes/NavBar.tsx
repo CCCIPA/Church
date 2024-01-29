@@ -3,7 +3,7 @@
 import logo from "@/assets/logo.png";
 import AIChatButton from "@/components/notes/AIChatButton";
 import AddEditNoteDialog from "@/components/notes/AddEditNoteDialog";
-import ThemeToggleButton from "@/components/notes/ThemeToggleButton";
+import ThemeToggleButton from "@/components/ThemeToggleButton";
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
@@ -24,7 +24,7 @@ export default function NavBar() {
         <div className="m-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
           <Link href="/notes" className="flex items-center gap-1">
             <Image src={logo} alt="CurBot logo" width={40} height={40} />
-            <span className="font-bold ml-1">Notes</span>
+            <span className="ml-1 font-bold">Notes</span>
           </Link>
           <div className="flex items-center gap-2">
             <UserButton
