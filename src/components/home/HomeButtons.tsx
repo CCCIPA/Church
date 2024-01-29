@@ -32,18 +32,22 @@ const HomeButtons = () => {
       tl.fromTo(
         ".name-animation",
         {
-          x: 0,
+          x: -100,
           opacity: 0,
-          rotate: 0,
+          rotate: -10,
         },
         {
           x: 0,
           opacity: 1,
-          rotate: 0,         
-          duration: 0.1,
-         delay:3,
+          rotate: 0,
+          ease: "elastic.out(1, 0.3)",
+          duration: 1,
+          delay: 0.5,
           transformOrigin: "left top",
-         
+          stagger: {
+            each: 0.1,
+            from: "random",
+          },
         },
       );
 
@@ -104,7 +108,7 @@ const HomeButtons = () => {
       </span> */}
       <Bounded
         ref={component}
-        className="relative z-50 flex h-[15dvh] w-[100dvw] flex-row items-center justify-center bg-slate-900 text-white"
+        className="relative z-50 flex h-[15dvh] w-[100dvw] flex-row items-center justify-center bg-slate-900 text-white "
       >
         <LoadingButton
           variant="ghost"
