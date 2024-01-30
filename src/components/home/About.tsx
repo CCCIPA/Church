@@ -134,7 +134,7 @@ export default function About() {
              text-white sm:text-[3.65vmin] md:w-[60dvw] md:text-[2.65vmin]"
       >
         {`Hey there! I'm Stephen, the developer behind CurBot. The main focus of this website is a feature that's still in development
-        – a chatbot which utilizes unique content from our progam. My starting point would ECNG 1009. I am
+        – a chatbot which utilizes unique content from our progam. My starting point would be ECNG 1009. I am
          eager to collaborate with both lecturers and students to make this app genuinely useful. While the website is free
           to use and will always be, it's not entirely free for me to run yet, and there may be downtimes during development.
            The ultimate goal is to find a way to make it completely free to run and use.`}
