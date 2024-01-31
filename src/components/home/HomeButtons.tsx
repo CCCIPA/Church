@@ -108,7 +108,7 @@ const HomeButtons = () => {
       </span> */}
       <Bounded
         ref={component}
-        className="relative z-50 flex h-[15dvh] w-[100dvw] flex-row items-center justify-center bg-slate-900 text-white "
+        className="relative z-50 flex h-[15dvh] flex-row items-center justify-evenly bg-slate-900 text-white shadow "
       >
         <LoadingButton
           variant="ghost"
@@ -119,7 +119,7 @@ const HomeButtons = () => {
           <Link
             href="/notes"
             passHref
-            className="w-20 p-5 text-[4.5vmin] md:w-40 md:text-[3.65vmin]"
+            className="w-[20vw] text-[4.5vmin]  md:text-[3.65vmin] "
           >
             {renderLetters("Notes", "second")}
           </Link>
@@ -135,7 +135,7 @@ const HomeButtons = () => {
           <Link
             href=""
             passHref
-            className="w-20 p-5 text-[4.5vmin] md:w-40 md:text-[3.65vmin] "
+            className="w-[20vw] text-[4.5vmin]  md:text-[3.65vmin] "
           >
             {renderLetters("Chat", "last")}
           </Link>
@@ -150,7 +150,7 @@ const HomeButtons = () => {
           <Link
             href=""
             passHref
-            className="w-20 p-5 text-[4.5vmin] md:w-40 md:text-[3.65vmin]"
+            className="w-[20vw] text-[4.5vmin] md:w-40 md:text-[3.65vmin] "
           >
             {renderLetters("Play", "last")}
           </Link>

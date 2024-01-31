@@ -1,13 +1,8 @@
 import Note from "@/components/notes/Note";
 import prisma from "@/lib/db/prisma";
 import { auth } from "@clerk/nextjs";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "CurBot - Notes",
-};
-
-export default async function NotesPage() {
+export default async function Notes() {
   const { userId } = auth();
 
   if (!userId) throw Error("userId undefined");

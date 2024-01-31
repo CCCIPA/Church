@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { useUser } from "@clerk/nextjs";
 import { Message } from "ai";
 import { useChat } from "ai/react";
-import { Bot, Trash, XCircle } from "lucide-react";
+import { Bot, Trash, XCircle, XSquare } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Button } from "../ui/button";
@@ -48,10 +48,10 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
         open ? "fixed" : "hidden",
       )}
     >
-      <button onClick={onClose} className="mb-1 ms-auto block">
-        <XCircle size={30} />
-      </button>
       <div className="flex h-[600px] flex-col rounded border bg-background shadow-xl">
+      <button onClick={onClose} className="mb-1 ms-auto block ">
+        <XSquare size={30} />
+      </button>
         <div className="mt-3 h-full overflow-y-auto px-3" ref={scrollRef}>
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />

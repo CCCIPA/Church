@@ -4,12 +4,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Bounded from "@/components/notes/Bounded";
 import Link from "next/link";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 import { useState } from "react";
 
@@ -108,7 +102,7 @@ export default function About() {
 
   return (
     <Bounded
-      className="m-auto -mt-[18vmin] flex items-center justify-center bg-slate-800 p-10 sm:mt-0 md:-mt-[32vmin]"
+      className="m-auto -mt-[18vmin] mb-[10dvh] flex items-center justify-center bg-slate-900 sm:mt-0 md:-mt-[25vmin]"
       ref={component}
     >
       {/* <h1
@@ -123,17 +117,17 @@ export default function About() {
           </span>
         </h1> */}
       <span
-        className=" ml-3 block bg-clip-text text-center text-[6vmin] font-bold uppercase text-white
+        className=" ml-3 block bg-clip-text text-center text-[6vmin] text-gray-50
          sm:text-[5.65vmin] md:text-[4.65vmin]"
       >
-        {"ABOUT"}
+        {"Hey there!"}
       </span>
       <span
         className=" ml-1 mt-10 block w-[90dvw] bg-clip-text text-center 
-             text-[4vmin] font-extralight tracking-[.1em] text-transparent
-             text-white sm:text-[3.65vmin] md:w-[60dvw] md:text-[2.65vmin]"
+             text-[4vmin] font-extralight font-sans text-transparent
+             text-gray-200 sm:text-[3.65vmin] md:w-[80dvw] md:text-[3.5vmin]"
       >
-        {`Hey there! I'm Stephen, the developer behind CurBot. The main focus of this website is a feature that's still in development
+        {`I'm Stephen, the developer behind CurBot. The main focus of this website is a feature that's still in development
         – a chatbot which utilizes unique content from our progam. My starting point would be ECNG 1009. I am
          eager to collaborate with both lecturers and students to make this app genuinely useful. While the website is free
           to use and will always be, it's not entirely free for me to run yet, and there may be downtimes during development.
@@ -151,7 +145,7 @@ export default function About() {
                 curbotdev@gmail.com
         </Link>
         
-        {` Don't be shy; no need for formality either. 
+        {` or through the form below, Don't be shy; no need for formality either. 
            Any ideas would be greatly appreciated. Additionally, I'm working on the visuals. Instead of a woman playing air guitar, 
            I'm creating a robot. ALL the code is OPEN SOURCE. I've utilized existing tutorials and repos to develop it so far and will 
            continue to do so. I will provide a section for links to the recoures used in the near future`}

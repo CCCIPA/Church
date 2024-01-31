@@ -84,17 +84,17 @@ export default function Hero() {
 
   return (
     <Bounded
-      className="m-auto -mt-10 flex h-[60dvh] items-center justify-center sm:-mt-4"
+      className="m-auto -mt-10 flex h-[60dvh] items-center justify-center sm:mt-2"
       ref={component}
     >
-      <div className="m-auto grid grid-cols-1 md:w-[80dvw] md:grid-cols-2 xl:w-[70vw] 2xl:w-[60vw] ">
+      <div className="m-auto grid grid-cols-1 md:w-[75dvw] md:grid-cols-2 lg:w-[70dvw] xl:w-[70vw] 2xl:w-[60vw] ">
         <div className="flex items-center justify-center  border-dashed">
           <Person />
         </div>
         <div className="m-auto -mt-[30vmin] select-none sm:-mt-20 md:row-start-1 md:mt-auto ">
           <h1
-            className=" m-auto mb-8 flex  text-[20vmin] font-extrabold
-             leading-none tracking-tighter sm:text-[18vmin] md:text-[13vmin] "
+            className=" m-auto mb-8 flex  overflow-visible truncate
+             bg-clip-text text-[20vmin] font-extrabold leading-none tracking-tighter sm:text-[18vmin] md:text-[16vmin]"
             aria-label={"Cur" + "" + "Bot"}
           >
             <span className="block text-slate-300 ">
@@ -106,7 +106,7 @@ export default function Hero() {
           </h1>
           <span
             className="tag-line -mt-8 ml-1 block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-200
-             bg-clip-text text-center  text-[4vmin] font-bold uppercase tracking-[.2em] text-transparent opacity-0 sm:text-[3.65vmin] md:text-[2.65vmin] 
+             bg-clip-text text-center  text-[4vmin] font-bold uppercase tracking-[.2em] text-transparent opacity-0 sm:text-[3.65vmin] md:text-[3.15vmin] 
              "
           >
             {"The Curriculum Bot"}
