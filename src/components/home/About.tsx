@@ -23,7 +23,7 @@ export default function About() {
 
   const buttonClasses = `bg-${isCopied ? "white" : "blue-500"} text-${
     isCopied ? "black" : "white"
-  }  transition-all duration-500 ease-in-out  tracking-[.1em] underline`;
+  }  transition-all duration-500 ease-in-out underline`;
 
   const component = useRef(null);
 
