@@ -72,15 +72,16 @@ export default function About() {
       tl.fromTo(
         ".beta",
         {
-          y: -20,
+          x: -100,
           opacity: 0,
-          scale: 1,
+          scale: 1.3,
         },
         {
-          y: 0,
+          x: 0,
           opacity: 1,
           scale: 1,
-          duration: 1,
+          delay: 1.2,
+          duration: 1.2,
           ease: "power4.out",
         },
       );
@@ -102,7 +103,7 @@ export default function About() {
 
   return (
     <Bounded
-      className="m-auto -mt-[18vmin] mb-[10dvh] flex items-center justify-center bg-slate-900 sm:mt-0 md:-mt-[25vmin]"
+      className=" m-auto -mt-[18vmin] mb-[10dvh] flex items-center justify-center bg-slate-900 sm:mt-0 md:-mt-[25vmin]"
       ref={component}
     >
       {/* <h1
@@ -117,14 +118,14 @@ export default function About() {
           </span>
         </h1> */}
       <span
-        className=" ml-3 block bg-clip-text text-center text-[6vmin] text-gray-50
-         sm:text-[5.65vmin] md:text-[4.65vmin]"
+        className=" beta ml-3 block bg-clip-text text-center text-[6vmin] text-gray-50
+         sm:text-[5.65vmin] md:text-[4.65vmin] opacity-0"
       >
         {"Hey there!"}
       </span>
       <span
         className=" ml-1 mt-10 block w-[90dvw] bg-clip-text text-center 
-             text-[4vmin] font-extralight font-sans text-transparent
+             text-[4vmin] font-extralight font-sans 
              text-gray-200 sm:text-[3.65vmin] md:w-[80dvw] md:text-[3.5vmin]"
       >
         {`I'm Stephen, the developer behind CurBot. The main focus of this website is a feature that's still in development
