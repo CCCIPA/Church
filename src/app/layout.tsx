@@ -12,7 +12,7 @@ const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CurBot",
-  description: "Note-Taking App",
+  description: "The Curriculum Bot",
 };
 
 export default function RootLayout({
