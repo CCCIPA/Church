@@ -99,13 +99,7 @@ const HomeButtons = () => {
   };
 
   return (
-    <main>
-      {/* <span
-        ref={component}
-        className="z-50 ml-[4.2rem] flex  h-[5dvh] w-[100dvw] items-end justify-center bg-slate-900 text-[1.5vmax] uppercase text-red-500 md:ml-24 md:text-[1.5vmin]"
-      >
-        {"In Development"}
-      </span> */}
+    
       <Bounded
         ref={component}
         className="relative z-50 flex h-[15dvh] flex-row items-center justify-evenly bg-slate-900 text-white shadow "
@@ -150,13 +144,13 @@ const HomeButtons = () => {
           <Link
             href=""
             passHref
-            className="w-[20vw] text-[4.5vmin] md:w-40 md:text-[3.65vmin] "
+            className="w-[20vw] text-[4.5vmin] md:text-[3.65vmin] "
           >
             {renderLetters("Play", "last")}
           </Link>
         </LoadingButton>
       </Bounded>
-    </main>
+  
   );
 };
 
