@@ -5,6 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "CurBot - Notes",
+  description: "Note Taking AI App",
 };
 
 export default async function NotesPage() {
